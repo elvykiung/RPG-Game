@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Link reset stylesheet-->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Link css stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/javascript/game.js"></script>
 
+    <title>Star Wars!</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="float-right">Star Wars RPG</h1>
+    </div>
+    <br /><br />
+
+    <!-- card for each charaters-->
+    <div class="container ">
+      <div class="card-group">
+        <div
+          id="skywalker"
+          class="card text-center border-success"
+          style="width: 13rem;"
+        >
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Rei</li>
+            <li class="list-group-item">
+              <img
+                src="assets/images/Skywalker.jpg"
+                class="card-img-top"
+                alt="Skywalker"
+              />
+            </li>
+            <li class="list-group-item" id="skywalker_HP">150</li>
+          </ul>
+        </div>
+
+        <div
+          id="chewbace"
+          class="card text-center border-success"
+          style="width: 13rem;"
+        >
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Chewbacca</li>
+            <li class="list-group-item">
+              <img
+                src="assets/images/chewbaca.jpg"
+                class="card-img-top"
+                alt="chewbace"
+              />
+            </li>
+            <li class="list-group-item" id="chewbace_HP">120</li>
+          </ul>
+        </div>
+
+        <div
+          id="darklord"
+          class="card text-center border-success"
+          style="width: 13rem;"
+        >
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Darth Vader</li>
+            <li class="list-group-item">
+              <img
+                src="assets/images/darkLoard.jpg"
+                class="card-img-top"
+                alt="darklord"
+              />
+            </li>
+            <li class="list-group-item" id="darklord_HP">200</li>
+          </ul>
+        </div>
+
+        <div
+          id="white"
+          class="card text-center border-success"
+          style="width: 13rem;"
+        >
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Stormtrooper</li>
+            <li class="list-group-item">
+              <img
+                src="assets/images/white.jpg"
+                class="card-img-top"
+                alt="white"
+              />
+            </li>
+            <li class="list-group-item" id="white_HP">150</li>
+          </ul>
+        </div>
+      </div>
+
+      <br /><br /><br /><br />
+
+      <p>Your Character</p>
+      <div id="User-Char"></div>
+      <p>Enemies Available To Attack</p>
+      <div class="d-flex flex-row" id="Avilable-Attack"></div>
+
+      <p>Fight Section</p>
+      <button id="attack-btn">Attack</button>
+      <p>Defender</p>
+      <div id="Defender"></div>
+      <div id="Result"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
