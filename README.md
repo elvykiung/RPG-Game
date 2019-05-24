@@ -11,7 +11,7 @@
 
 This is an apps allow user to play simple RPG game of with the theme of Star War. User can choose their favorite character and the game will be dynamically update HTML pages by using jQuery library.
 
-![screenshot](assets/images/final.gif)
+![screenshot](https://github.com/elvykiung/RPG-Game/blob/master/assets/images/Final.gif?raw=true)
 
 ## Technologies
 
