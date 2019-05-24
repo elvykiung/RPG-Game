@@ -1,4 +1,4 @@
-// on click function, user click remain on user charater div, other move to avilable enemies.
+// on click function, user click remain on user character div, other move to available enemies.
 $(document).ready(function() {
   //create a array of an object of each enemies for user to choose.
   var avilableChar = [
@@ -23,32 +23,32 @@ $(document).ready(function() {
       attackPower: 10
     }
   ];
-  // avilable enemy to fight
+  // available enemy to fight
   var avilableEnamy = [];
   var userChoose;
   var defender;
 
-  // on click of any enamies
+  // on click of any enemies
   $('.card').on('click', function() {
-    //if avilabel enemy to fight has not show
+    //if available enemy to fight has not show
     if (avilableEnamy.length === 0) {
       //userchoose = the id of click in card div group i.e id="skywalker" id="chewbace"   id="darklord" and set it to groble variable
       userChoose = $(this).attr('id');
       //append user chose all element to the #user-char element
       $('#User-Char').append($(this));
 
-      // find out the unpick charater and make it become avilable enemies
+      // find out the unpick characters and make it become available enemies
       for (var i = 0; i < avilableChar.length; i++) {
-        // if user choose not equal to loop of avilble char
+        // if user choose not equal to loop of available char
         if (userChoose !== avilableChar[i].name) {
           //append all the avilable enemy chr to avilable attack html element
           $('#' + avilableChar[i].name).appendTo('#Avilable-Attack');
           //add css style to red
           $('#' + avilableChar[i].name).css('background-color', '#ff0000');
-          //store the array of avilble enemy to the globle variable
+          //store the array of available enemy to the globe variable
           avilableEnamy.push(avilableChar[i].name);
         }
-      } // else if defender not quale to undefine i.e defender have choosen, do nothing
+      } // else if defender not equal to undefined i.e defender have chosen, do nothing
     } else if (defender !== undefined) {
     } else {
       if ($(this).attr('id') !== userChoose) {
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
   //click attack function
   $('#attack-btn').on('click', function() {
-    //find the object of user choose charather
+    //find the object of user choose character
     var userChooseObject = charFinder(userChoose);
     var defenderObject = charFinder(defender);
     //create random number to add to attack point
@@ -83,7 +83,7 @@ $(document).ready(function() {
     var userAttackPW = userChooseObject.attackPower + userrandomNum;
     var defenderAttackPW = defenderObject.attackPower + defenderrandomNum;
 
-    // renew user hp everytime the attack click btn happen
+    // renew user hp every time the attack click btn happen
     if (userChooseObject.hp !== 0 && defenderObject.hp !== 0) {
       userChooseObject.hp = Math.max(0, userChooseObject.hp - defenderAttackPW);
       $('#' + userChooseObject.name + '_HP').text(userChooseObject.hp);
@@ -95,7 +95,14 @@ $(document).ready(function() {
     //if user char hp bigger than 0 and defender is bigger than 0
     if (userChooseObject.hp > 0 && defenderObject.hp > 0) {
       // add html element to result element, the name of defender and the number attack point of user
-      $('#Result').html('<p>You attacked ' + defenderObject.name + ' for ' + userAttackPW + ' damage</p>' + `<p>${defenderObject.name} attacked you back for ${defenderAttackPW} damage</p>`);
+      $('#Result').html(
+        '<p>You attacked ' +
+          defenderObject.name +
+          ' for ' +
+          userAttackPW +
+          ' damage</p>' +
+          `<p>${defenderObject.name} attacked you back for ${defenderAttackPW} damage</p>`
+      );
 
       // if user char hp smaller or equal to 0, add to the result html add reset button and reset function
     } else if (userChooseObject.hp <= 0) {
